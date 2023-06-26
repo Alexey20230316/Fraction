@@ -15,35 +15,194 @@ public:
 
 	bool operator == (const Fraction& other)
 	{
-		return this->numerator_ == other.numerator_ && this->denominator_ == other.denominator_;
+
+			int i = 1;
+
+			int a = this->numerator_;
+			int b = this->denominator_;
+
+			int c = other.numerator_;
+			int d = other.denominator_;
+			int byi = 1;
+
+			while (byi)
+			{
+				if ((b * i) % d)
+				{
+					i++;
+				}
+				else
+				{
+					byi = 0;
+				}
+			}
+
+			a = a * i;
+			b = b * i;
+			c = c * (b / d);
+			d = b;
+
+		return a == c;
 	}
-	bool operator != (const Fraction& other)
+	bool operator != (const Fraction& other) const
 	{
-		return this->numerator_ != other.numerator_ && this->denominator_ != other.denominator_;
+
+			int i = 1;
+
+			int a = this->numerator_;
+			int b = this->denominator_;
+
+			int c = other.numerator_;
+			int d = other.denominator_;
+			int byi = 1;
+
+			while (byi)
+			{
+				if ((b * i) % d)
+				{
+					i++;
+				}
+				else
+				{
+					byi = 0;
+				}
+			}
+
+			a = a * i;
+			b = b * i;
+			c = c * (b / d);
+			d = b;
+
+		return a != c;
 	}
 	bool operator < (const Fraction& other)
 	{
-		return this->numerator_ < other.numerator_ && this->denominator_ < other.denominator_;
+
+		int i = 1;
+
+		int a = this->numerator_;
+		int b = this->denominator_;
+
+		int c = other.numerator_;
+		int d = other.denominator_;
+		int byi = 1;
+
+		while (byi)
+		{
+			if ((b * i) % d)
+			{
+				i++;
+			}
+			else
+			{
+				byi = 0;
+			}
+		}
+
+		a = a * i;
+		b = b * i;
+		c = c * (b / d);
+		d = b;
+
+		return a < c;
 	}
 	bool operator > (const Fraction& other)
 	{
-		return this->numerator_ > other.numerator_ && this->denominator_ > other.denominator_;
+		int i = 1;
+
+		int a = this->numerator_;
+		int b = this->denominator_;
+
+		int c = other.numerator_;
+		int d = other.denominator_;
+		int byi = 1;
+
+		while (byi)
+		{
+			if ((b * i) % d)
+			{
+				i++;
+			}
+			else
+			{
+				byi = 0;
+			}
+		}
+
+		a = a * i;
+		b = b * i;
+		c = c * (b / d);
+		d = b;
+
+		return a > c;
 	}
 	bool operator <= (const Fraction& other)
 	{
-		return this->numerator_ <= other.numerator_ && this->denominator_ <= other.denominator_;
+		int i = 1;
+
+		int a = this->numerator_;
+		int b = this->denominator_;
+
+		int c = other.numerator_;
+		int d = other.denominator_;
+		int byi = 1;
+
+		while (byi)
+		{
+			if ((b * i) % d)
+			{
+				i++;
+			}
+			else
+			{
+				byi = 0;
+			}
+		}
+
+		a = a * i;
+		b = b * i;
+		c = c * (b / d);
+		d = b;
+
+		return a <= c;
 	}
 	bool operator >= (const Fraction& other)
 	{
-		return this->numerator_ >= other.numerator_ && this->denominator_ >= other.denominator_;
+		int i = 1;
+
+		int a = this->numerator_;
+		int b = this->denominator_;
+
+		int c = other.numerator_;
+		int d = other.denominator_;
+		int byi = 1;
+
+		while (byi)
+		{
+			if ((b * i) % d)
+			{
+				i++;
+			}
+			else
+			{
+				byi = 0;
+			}
+		}
+
+		a = a * i;
+		b = b * i;
+		c = c * (b / d);
+		d = b;
+
+		return a >= c;
 	}
 
 };
 
 int main()
 {
-	Fraction f1(4, 3);
-	Fraction f2(6, 11);
+	Fraction f1(3, 4);
+	Fraction f2(3, 4);
 
 	std::cout << "f1" << ((f1 == f2) ? " == " : " not == ") << "f2" << '\n';
 	std::cout << "f1" << ((f1 != f2) ? " != " : " not != ") << "f2" << '\n';
